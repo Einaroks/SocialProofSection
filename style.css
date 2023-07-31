@@ -1,32 +1,54 @@
-@media screen and (max-width: 900px){ /* Mobile screens */
-    /* Main */
+@media screen and (max-width: 600px /* change to 600px */) {
     main{
-        width: 375px !important;
+        padding: 15px !important;
+        width: 340px !important;
+    }
+    /* Header */
+    #top{
+        flex-direction: column !important;
+    }
+    #header-wrapper{
+        width: 295px !important;
         text-align: center;
     }
-        /* header */
-        #top{
-            grid-template-columns: 1fr !important;
-            width: 200px !important;
-            border: solid; /* remove */
-        }
-        #header-wrapper{
-            border: solid;
-        }
+    #top h1{
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+    #top p{
+        width: 100% !important;
+    }
+    /* List review */
+    ul li{
+        margin: 0 !important;
+        margin-top: 15px !important;
+        width: 265px !important;
+        text-align: center;
+        line-height: 2;
+        border-radius: 10px !important;
+    }
+    ul li:last-of-type{
+        margin-bottom: 15px !important; /* Margin room between quotes and reviews */
+    }
+    ul{
+        text-align: center;
+        padding: 0;
+        width: 295px;
+        margin: 0 !important;
+    }
+    .stars{
+        display: block !important;
+        margin-left: 90px;
+    }
 
-        /* reviews (stars) */
-        ul li{
-            margin: 0px !important;
-        }
-
-        /* quote boxes */
-        #quotes-wrapper{
-            grid-template-columns: 1fr !important;
-        }
-        .quote-box{
-            margin: 8px !important;
-            text-align: left;
-        }
+    /* Quote boxes */
+    #quotes-wrapper{
+        grid-template-columns: 1fr !important;
+    }
+    .quote-box{
+        margin-top: 15px !important;
+        margin-bottom: 0 !important;
+    }
 }
 
 @font-face {
@@ -65,11 +87,14 @@ main{
     border: dotted hsl(303, 10%, 53%);
     padding: 60px;
 }
-#top{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 /* Header content */
+    #top{
+        display: flex;
+        flex-direction: row;
+        
+        padding: 15px;
+    }
+
     #top h1{
         font-size: 3em;
         font-family: "LeagueSpartan-bold";
@@ -79,13 +104,12 @@ main{
     #top p{
         color: hsl(303, 10%, 53%);
         width: 360px;
+        grid-column: 1;
     }
 /** Review list **/
 ul{
     list-style: none;
-    margin-left: 0;
-    margin-right: 30px;
-    margin-top: 60px;
+    margin-left: 140px;
 }
 ul li{
     border-radius: 5px;
@@ -115,7 +139,7 @@ ul li{
 /** Quote boxes **/
 #quotes-wrapper{
     display: grid;
-
+    
     grid-template-columns: 1fr 1fr 1fr;
 }
 .quote-box{
